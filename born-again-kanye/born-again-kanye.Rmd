@@ -1,0 +1,135 @@
+---
+title: "Kanye West's Rebirth"
+author: "Connor Rothschild"
+date: "11/9/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.height = 6, fig.width = 9)
+```
+
+```{r}
+library(spotifyr)
+library(tidyverse)
+library(ggtext)
+cr::set_cr_theme()
+```
+
+
+```{r, eval = FALSE}
+Sys.setenv(SPOTIFY_CLIENT_ID = 'x')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = 'x')
+
+access_token <- get_spotify_access_token()
+
+kanye <- get_artist_audio_features('kanye west')
+kanye
+```
+
+Clean
+
+```{r, eval = FALSE}
+grouped <- kanye %>% 
+  group_by(album_name) %>% 
+  summarise_at(vars(danceability:tempo), mean) 
+
+grouped <- grouped %>% 
+  filter(album_name != "Graduation (Alternative Business Partners)" & album_name != "Late Orchestration") %>% 
+  mutate(album_name = ifelse(album_name == "Kanye West Presents Good Music Cruel Summer", "Good Music Cruel Summer", album_name))
+
+##write.csv(grouped, "./kanye_data.csv")
+```
+
+
+```{r, include = FALSE}
+grouped <- readr::read_csv("kanye_data.csv")
+```
+
+Visualize
+
+```{r}
+grouped %>% 
+  mutate(album_name = fct_reorder(album_name, danceability),
+         fill = ifelse(album_name == "JESUS IS KING", 1, 0)) %>% 
+  ggplot(aes(x = album_name, y = danceability, fill = fill), show.legend = FALSE) +
+  geom_col() +
+  coord_flip() +
+  cr::fix_bars() +
+  theme(legend.position = "none") +
+  labs(x = element_blank(),
+       y = "Danceability",
+       title = "Don't Play This at Parties", 
+       subtitle = "How <span style='color:#1089ff'>Jesus is King</span> compares to Kanye's other albums in **Danceability**",
+       caption = "Source: Spotify API\nDesign: Connor Rothschild") +
+  theme(plot.subtitle = element_markdown(lineheight = 1.1))
+```
+
+```{r}
+grouped %>% 
+  mutate(album_name = fct_reorder(album_name, tempo),
+         fill = ifelse(album_name == "JESUS IS KING", 1, 0)) %>% 
+  ggplot(aes(x = album_name, y = tempo, fill = fill), show.legend = FALSE) +
+  geom_col() +
+  coord_flip() +
+  cr::fix_bars() +
+  theme(legend.position = "none") +
+  labs(x = element_blank(),
+       y = "Tempo (BPM)",
+       title = "Slower than Most", 
+       subtitle = "How <span style='color:#1089ff'>Jesus is King</span> compares to Kanye's other albums in **Tempo**",
+       caption = "Source: Spotify API\nDesign: Connor Rothschild") +
+  theme(plot.subtitle = element_markdown(lineheight = 1.1))
+```
+
+```{r}
+grouped %>% 
+  mutate(album_name = fct_reorder(album_name, acousticness),
+         fill = ifelse(album_name == "JESUS IS KING", 1, 0)) %>% 
+  ggplot(aes(x = album_name, y = acousticness, fill = fill), show.legend = FALSE) +
+  geom_col() +
+  coord_flip() +
+  cr::fix_bars() +
+  theme(legend.position = "none") +
+  labs(x = element_blank(),
+       y = "Acousticness",
+       title = "Not a Rap Album", 
+       subtitle = "How <span style='color:#1089ff'>Jesus is King</span> compares to Kanye's other albums in **Acousticness**",
+       caption = "Source: Spotify API\nDesign: Connor Rothschild") +
+  theme(plot.subtitle = element_markdown(lineheight = 1.1))
+        # plot.title = element_text(hjust = -0.5))
+```
+
+To do: 
+Radar charts
+
+```{r}
+library(radarchart)
+
+grouped <- grouped %>% 
+  select(-X1)
+
+radar_chart <- 
+  grouped %>% 
+  select(-c("tempo", "loudness", "key"))
+
+chartJSRadar(radar_chart, 
+polyAlpha = 0.1, 
+lineAlpha = 0.8, 
+maxScale = 1, 
+byrow = T, 
+nrow = 3)
+```
+
+Song-by-song analysis (use ggridge charts)
+
+```{r}
+
+```
+
+Sentiment analysis on text: NRC and polarity
+
+```{r}
+
+```
+

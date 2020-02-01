@@ -1,0 +1,122 @@
+"","album_name","group","score"
+"1","808s & Heartbreak","danceability",0.653291666666667
+"2","808s & Heartbreak","energy",0.4825
+"3","808s & Heartbreak","key",5.66666666666667
+"4","808s & Heartbreak","loudness",-9.31758333333333
+"5","808s & Heartbreak","mode",0.5
+"6","808s & Heartbreak","speechiness",0.058375
+"7","808s & Heartbreak","acousticness",0.2073125
+"8","808s & Heartbreak","instrumentalness",0.139196216666667
+"9","808s & Heartbreak","liveness",0.227879166666667
+"10","808s & Heartbreak","valence",0.345679166666667
+"11","808s & Heartbreak","tempo",116.932875
+"12","Graduation","danceability",0.5722
+"13","Graduation","energy",0.624675
+"14","Graduation","key",5.5
+"15","Graduation","loudness",-7.1974
+"16","Graduation","mode",0.6
+"17","Graduation","speechiness",0.18576
+"18","Graduation","acousticness",0.11222675
+"19","Graduation","instrumentalness",4.00565e-05
+"20","Graduation","liveness",0.3044775
+"21","Graduation","valence",0.50983
+"22","Graduation","tempo",104.9856
+"23","JESUS IS KING","danceability",0.566454545454545
+"24","JESUS IS KING","energy",0.539454545454545
+"25","JESUS IS KING","key",4.90909090909091
+"26","JESUS IS KING","loudness",-6.25345454545455
+"27","JESUS IS KING","mode",0.363636363636364
+"28","JESUS IS KING","speechiness",0.151118181818182
+"29","JESUS IS KING","acousticness",0.479577090909091
+"30","JESUS IS KING","instrumentalness",0.000223036363636364
+"31","JESUS IS KING","liveness",0.301054545454545
+"32","JESUS IS KING","valence",0.380727272727273
+"33","JESUS IS KING","tempo",102.289909090909
+"34","Good Music Cruel Summer","danceability",0.571416666666667
+"35","Good Music Cruel Summer","energy",0.676833333333333
+"36","Good Music Cruel Summer","key",5.08333333333333
+"37","Good Music Cruel Summer","loudness",-6.62366666666667
+"38","Good Music Cruel Summer","mode",0.416666666666667
+"39","Good Music Cruel Summer","speechiness",0.213366666666667
+"40","Good Music Cruel Summer","acousticness",0.079515
+"41","Good Music Cruel Summer","instrumentalness",0.000186083333333333
+"42","Good Music Cruel Summer","liveness",0.253358333333333
+"43","Good Music Cruel Summer","valence",0.366058333333333
+"44","Good Music Cruel Summer","tempo",127.97975
+"45","KIDS SEE GHOSTS","danceability",0.649
+"46","KIDS SEE GHOSTS","energy",0.622142857142857
+"47","KIDS SEE GHOSTS","key",3.71428571428571
+"48","KIDS SEE GHOSTS","loudness",-6.09242857142857
+"49","KIDS SEE GHOSTS","mode",0.571428571428571
+"50","KIDS SEE GHOSTS","speechiness",0.118871428571429
+"51","KIDS SEE GHOSTS","acousticness",0.247652857142857
+"52","KIDS SEE GHOSTS","instrumentalness",0.00579922142857143
+"53","KIDS SEE GHOSTS","liveness",0.213571428571429
+"54","KIDS SEE GHOSTS","valence",0.378428571428571
+"55","KIDS SEE GHOSTS","tempo",120.601
+"56","Late Registration","danceability",0.603046875
+"57","Late Registration","energy",0.635625
+"58","Late Registration","key",6.453125
+"59","Late Registration","loudness",-7.860140625
+"60","Late Registration","mode",0.53125
+"61","Late Registration","speechiness",0.3744546875
+"62","Late Registration","acousticness",0.18232515625
+"63","Late Registration","instrumentalness",0.00187933734375
+"64","Late Registration","liveness",0.2060875
+"65","Late Registration","valence",0.519375
+"66","Late Registration","tempo",102.695203125
+"67","My Beautiful Dark Twisted Fantasy","danceability",0.532346153846154
+"68","My Beautiful Dark Twisted Fantasy","energy",0.680046153846154
+"69","My Beautiful Dark Twisted Fantasy","key",4.96153846153846
+"70","My Beautiful Dark Twisted Fantasy","loudness",-5.93873076923077
+"71","My Beautiful Dark Twisted Fantasy","mode",0.307692307692308
+"72","My Beautiful Dark Twisted Fantasy","speechiness",0.135930769230769
+"73","My Beautiful Dark Twisted Fantasy","acousticness",0.190156923076923
+"74","My Beautiful Dark Twisted Fantasy","instrumentalness",0.0601815153846154
+"75","My Beautiful Dark Twisted Fantasy","liveness",0.377423076923077
+"76","My Beautiful Dark Twisted Fantasy","valence",0.361273076923077
+"77","My Beautiful Dark Twisted Fantasy","tempo",111.285807692308
+"78","The College Dropout","danceability",0.592666666666667
+"79","The College Dropout","energy",0.590547619047619
+"80","The College Dropout","key",6.07142857142857
+"81","The College Dropout","loudness",-7.83916666666667
+"82","The College Dropout","mode",0.476190476190476
+"83","The College Dropout","speechiness",0.407716666666667
+"84","The College Dropout","acousticness",0.359087857142857
+"85","The College Dropout","instrumentalness",1.15738095238095e-06
+"86","The College Dropout","liveness",0.316740476190476
+"87","The College Dropout","valence",0.663047619047619
+"88","The College Dropout","tempo",106.151595238095
+"89","The Life Of Pablo","danceability",0.611025641025641
+"90","The Life Of Pablo","energy",0.575717948717949
+"91","The Life Of Pablo","key",6.56410256410256
+"92","The Life Of Pablo","loudness",-6.17671794871795
+"93","The Life Of Pablo","mode",0.692307692307692
+"94","The Life Of Pablo","speechiness",0.258520512820513
+"95","The Life Of Pablo","acousticness",0.34349
+"96","The Life Of Pablo","instrumentalness",0.000203399487179487
+"97","The Life Of Pablo","liveness",0.243769230769231
+"98","The Life Of Pablo","valence",0.394884615384615
+"99","The Life Of Pablo","tempo",110.926282051282
+"100","ye","danceability",0.685857142857143
+"101","ye","energy",0.503428571428571
+"102","ye","key",5
+"103","ye","loudness",-5.66828571428571
+"104","ye","mode",0.285714285714286
+"105","ye","speechiness",0.314528571428571
+"106","ye","acousticness",0.306742857142857
+"107","ye","instrumentalness",0
+"108","ye","liveness",0.185957142857143
+"109","ye","valence",0.281385714285714
+"110","ye","tempo",121.362714285714
+"111","Yeezus","danceability",0.5562
+"112","Yeezus","energy",0.592
+"113","Yeezus","key",4.7
+"114","Yeezus","loudness",-5.4099
+"115","Yeezus","mode",0.6
+"116","Yeezus","speechiness",0.1791
+"117","Yeezus","acousticness",0.1742754
+"118","Yeezus","instrumentalness",8.9137e-05
+"119","Yeezus","liveness",0.15278
+"120","Yeezus","valence",0.35279
+"121","Yeezus","tempo",119.8598
