@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/500986/1612901948d4414299a29a7e0f54deaa
+bundleId: https://api.rpubs.com/api/v1/document/500986/1612901948d4414299a29a7e0f54deaa
+url: http://rpubs.com/connorrothschild/500986
+when: 1559257591.27344
