@@ -58,6 +58,8 @@ data %>%
   scale_x_continuous(breaks = c(2002,2019)) +
   scale_y_continuous(breaks = c(0,12000)) +
   facet_geo(~ state, grid = "us_state_grid1") +
+  # transition_reveal(region_name_3) + 
+  # coord_cartesian(clip = 'off') + 
   labs(title = "Refugee Acceptance on the Decline",
        subtitle = "Number of refugees accepted annually, 2002 - 2019",
        x = element_blank(),
