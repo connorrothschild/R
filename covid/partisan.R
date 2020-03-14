@@ -24,7 +24,7 @@ ggplot() +
   geom_segment(data=infected, aes(y=concerned, yend=concerned, x=0, xend=.5), color="#b2b2b2", size=0.15) +
   ggalt::geom_dumbbell(data=infected, aes(y=concerned, x=rep, xend=dem),
                            size=1.5, color="#b2b2b2", size_x=3, size_xend = 3,
-                           colour_x=red, colour_xend =blue) +
+                           colour_x = red, colour_xend = blue) +
 # text below points
   geom_text(data=filter(infected, concerned=="Very concerned"),
             aes(x=dem, y=concerned, label="Democrats"),
