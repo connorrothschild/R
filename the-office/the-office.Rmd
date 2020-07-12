@@ -1,8 +1,12 @@
 ---
 title: "Who Mentions Who in the Office?"
-author: "Connor Rothschild"
-date: "12/16/2019"
-output: html_document
+date: "2019-12-16"
+authors: 
+ - admin
+categories: ["R"]
+# featuredImage: "featured.png"
+tags: ["r", "visualization", "D3.js", "interactive"]
+summary: "Whose the most popular character in the Office?"
 ---
 
 ```{r setup, include=FALSE}
