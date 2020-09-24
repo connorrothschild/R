@@ -1,0 +1,12 @@
+name: covid-posts
+title: covid-posts
+username:
+account: connorrothschild
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2874442
+bundleId: 3664133
+url: https://connorrothschild.shinyapps.io/covid-posts/
+when: 1600910360.3554
+asMultiple: FALSE
+asStatic: FALSE
