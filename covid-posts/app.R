@@ -4,22 +4,13 @@ library(purrr)
 library(readr)
 library(stringr)
 library(magrittr)
+library(reactable)
 
-df <- readxl::read_excel('postsTopicsRoles0920.xlsx') %>% 
-    mutate(Data = case_when(Data == "Y" ~ "Yes", 
-                            Data == "N" ~ "No",
-                            TRUE ~ "Unclear"),
-           Code = case_when(Code == "Y" ~ "Yes", 
-                            Code == "N" ~ "No",
-                            TRUE ~ "Unclear"),
-           Math = case_when(Math == "Y" ~ "Yes", 
-                            Math == "N" ~ "No",
-                            TRUE ~ "Unclear")
-    ) %>% 
-    select(-Text)
+df <- readxl::read_excel('postsTopicsRoles1001forConnor.xlsx') %>%
+    mutate(Date = format(Date, format = "%B %d")) %>%
+    relocate(URL, .after = last_col())
 
-ui <- fluidPage(
-fluidRow(
+ui <- fluidPage(fluidRow(
     column(
         3,
         tabPanel(
@@ -72,17 +63,16 @@ fluidRow(
                 selected = "All"
             )
         )
-    ), 
+    ),
     column(
         9,
         conditionalPanel(condition = 'output.nrow != "No Data"',
-                         reactable::reactableOutput("table")),
+                         reactableOutput("table")),
         textOutput("nrow")
     )
 ))
 
 server <- function(input, output, session) {
-    
     chosen_dataset <- reactive({
         if (input$Role != "All") {
             df <- df %>%
@@ -91,7 +81,7 @@ server <- function(input, output, session) {
         if (input$GeoSpecific != "All") {
             df <- df %>%
                 filter(GeoSpecific == input$GeoSpecific)
-        }        
+        }
         if (input$Topic != "All") {
             df <- df %>%
                 filter(Topic == input$Topic)
@@ -107,10 +97,33 @@ server <- function(input, output, session) {
         return(df)
     })
     
-    output$table <- reactable::renderReactable({reactable::reactable(chosen_dataset())})
-    output$nrow <- renderText({ 
-        ifelse(nrow(chosen_dataset()) == 0, "No Data", nrow(chosen_dataset()))
-               })
+    url_title_lookup <- df %>%
+        select(URL, Title)
+    
+    output$table <- renderReactable({
+        reactable(
+            chosen_dataset(),
+            columns = list(
+                URL = colDef(show = FALSE),
+                Author = colDef(filterable = TRUE),
+                Date = colDef(filterable = TRUE),
+                Title = colDef(
+                    filterable = TRUE,
+                    minWidth = 300,
+                    cell = function(value, index) {
+                        htmltools::tags$a(href = url_title_lookup[url_title_lookup$Title == value,]$URL,
+                                          target = "_blank",
+                                          value)
+                    }
+                )
+            )
+        )
+    })
+    output$nrow <- renderText({
+        ifelse(nrow(chosen_dataset()) == 0,
+               "No Data",
+               nrow(chosen_dataset()))
+    })
 }
 
 
