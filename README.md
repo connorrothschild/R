@@ -1,3 +1,3 @@
 # R Projects
 
-Miscellaneous R projects. Find them in a more polished format on [my website](https://connorrothschild.github.io/blog/).
+Miscellaneous R projects I've worked on! You can find them in a more polished format on [my blog](https://connorrothschild.com/post/).
